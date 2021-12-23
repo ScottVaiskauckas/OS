@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% set active_page = "os"%}
+
+{% block title %}OS{% endblock %}
+
+{% block content %}
+<p>
+    {{ deck.strategy }}
+    {{ deck.id }}
+</p>
+<meta id="deck-json" data-deck="{{ deck }}">
+    <div class="container">
+        <section class ="row justify-content-center m-5">
+            <div class="card os-deck bg-dark text-light text-center" id="os-deck-left" onclick="DrawACard()">
+                <div id="deck-text">
+                    Draw A Card!
+                </div>
+            </div>
+        </section>
+    </div> 
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='js/OS.js') }}"></script>
+{% endblock %}
